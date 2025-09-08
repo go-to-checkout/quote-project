@@ -1,2 +1,6 @@
-#가상환경 깃에 추가못하게 설정
+#가상환경 제외
 .venv/
+#PyCharm 설정 파일 제외
+.idea/
+#파이썬 버전파일 제외
+.python-version
