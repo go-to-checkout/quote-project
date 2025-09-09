@@ -4,3 +4,5 @@
 .idea/
 #파이썬 버전파일 제외
 .python-version
+#__pycache__은 Git으로 관리할 필요X
+__pycache__/
