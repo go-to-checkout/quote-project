@@ -10,7 +10,7 @@
 - 명언 북마크
 - 자기성찰 질문 랜덤 제공
 
-<iframe width="600" height="336" src="https://www.erdcloud.com/p/Fe5tr5uZK5BmNkYRk" frameborder="0" allowfullscreen></iframe>
+https://www.erdcloud.com/p/Fe5tr5uZK5BmNkYRk
 
 #유비콘 서버시작
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
