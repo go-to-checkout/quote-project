@@ -26,9 +26,8 @@ DB_NAME = os.getenv("DB_NAME", "fastapi_db")
 
 # DATABASE_URL이 제대로 설정되지 않은 경우 개별 정보로 생성
 if DATABASE_URL == ("postgres://postgres:password@localhost:5432/fastapi_db"):
-    DATABASE_URL = (
-        f"postgres://{DB_USER}:{DB_PASSWORD}" f"@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-    )
+    DATABASE_URL = f"postgres://{DB_USER}:{DB_PASSWORD}" f"@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+
 print(f"🔗 사용할 DATABASE_URL: {DATABASE_URL.replace(DB_PASSWORD, '***')}")
 
 TORTOISE_CONFIG: Dict[str, Any] = {
@@ -38,17 +37,23 @@ TORTOISE_CONFIG: Dict[str, Any] = {
     "apps": {
         "models": {
             "models": [
-                "app.models.user",  # 실제 모델 파일 경로로 수정
-                # 'app.models.diary',
-                # 'app.models.quote',
-                # 'app.models.question',
+                # ERD에 맞게 모든 모델 추가
+                "app.models.user",  # User, TokenBlacklist
+                "app.models.diary",  # Diary
+                "app.models.quote",  # Quote, Bookmark
+                "app.models.question",  # Question, UserQuestion
                 "aerich.models",  # 마이그레이션용
             ],
             "default_connection": "default",
         }
     },
-    "use_tz": False,
-    "timezone": "UTC",
+    "use_tz": True,  # 타임존 사용
+    "timezone": "Asia/Seoul",  # 한국 시간대
+}
+AERICH_CONFIG = {
+    "tortoise_orm": TORTOISE_CONFIG,
+    "location": "./app/db/migrations",  # 📁 마이그레이션 파일 저장 경로
+    "src_folder": "./app",  # 📂 소스 코드 폴더
 }
 
 

@@ -1,7 +1,15 @@
-fastapi==0.104.1
-tortoise-orm==0.20.0
-asyncpg==0.29.0
-uvicorn==0.24.0
-python-dotenv==1.0.0
-aerich==0.7.2
-pydantic==2.5.0
+fastapi==0.104.1 #웹프레임워크
+uvicorn==0.24.0 #ASGI웹서버
+tortoise-orm==0.20.0 #데이터베이스
+aerich==0.7.2 #TortoiseORM마이그레이션툴
+asyncpg==0.29.0 #postgreSQL 드라이버
+python-dotenv==1.0.0 #가상환경에서 중요정보파일관리
+pydantic==2.5.0 #데이터 유효성 검사
+tomlkit==0.12.0 #TOML형식사용
+tomli_w==1.0.0 #딕셔너리를TOML형식으로 변환
+python-jose[cryptography]==3.3.0 #JWT 처리
+passlib[bcrypt]==1.7.4 #비밀번호 해싱
+selenium==4.15.0 #스크래핑
+webdriver-manager==4.0.1 #셀레늄 드라이버 관리
+beautifulsoup4==4.12.2 #HTML 추출
+aiohttp==3.9.0 #HTTP클라이언트 서버구축python-jose[cryptography]==3.3.0

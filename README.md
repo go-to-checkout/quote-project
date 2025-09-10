@@ -1,4 +1,18 @@
-# Welcome to your organization's demo respository
-This code repository (or "repo") is designed to demonstrate the best GitHub has to offer with the least amount of noise.
+# 나만의 일기장 프로젝트
 
-The repo includes an `index.html` file (so it can render a web page), two GitHub Actions workflows, and a CSS stylesheet dependency.
+**💫 주요 기능**
+
+- 회원가입
+- 로그인/로그아웃 (JWT 인증)
+- 일기 CRUD
+- 일기 검색 및 정렬
+- 명언 랜덤 제공
+- 명언 북마크
+- 자기성찰 질문 랜덤 제공
+
+<iframe width="600" height="336" src="https://www.erdcloud.com/p/Fe5tr5uZK5BmNkYRk" frameborder="0" allowfullscreen></iframe>
+
+#유비콘 서버시작
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+#가상환경가동
+source .venv/scripts/activate

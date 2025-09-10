@@ -5,3 +5,29 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
+
+[tool.aerich]
+tortoise_orm = "app.db.config.TORTOISE_CONFIG"
+location = "app/db/migrations"
+src_folder = "./."
+
+[tool.flake8]
+max-line-length = 100
+extend-ignore = ["E203", "W503"]
+
+[tool.ruff]
+line-length = 100
+fix = true
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+fixable = ["ALL"]
+unfixable = []
+ignore = [
+    "F841",  # 사용하지 않는 변수
+    "E402",  # 모듈 레벨 import가 파일 상단에 없음
+]
+
+[tool.ruff.format]
+# ruff format에서는 line-length 설정이 없습니다
+# 대신 상위 [tool.ruff]에서 설정한 line-length를 사용합니다
