@@ -1,4 +1,5 @@
-[tool.aerich]
-tortoise_orm = "app.core.db.TORTOISE_ORM"
-location = "./migrations"
-src_folder = "./."
+__pycache__/
+.venv/
+.env
+.DS_Store
+db.sqlite3
